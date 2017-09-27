@@ -3,11 +3,76 @@ import java.util.Random;
 
 public class Main {
 
+    public static int printCardValue(int cardValue)
+    {
+        int roundPlayerHand = 0;
+
+        if (cardValue == 1)
+        {
+            System.out.println("Your card is an ACE!");
+            roundPlayerHand += 1;
+        }
+        else if (cardValue == 2)
+        {
+            System.out.println("Your card is a 2!");
+            roundPlayerHand +=2;
+        }
+        else if (cardValue == 3)
+        {
+            System.out.println("Your card is a 3!");
+            roundPlayerHand +=3;
+        }
+        else if (cardValue == 4)
+        {
+            System.out.println("Your card is a 4!");
+            roundPlayerHand +=4;
+        }
+        else if (cardValue == 5)
+        {
+            System.out.println("Your card is a 5!");
+            roundPlayerHand +=5;
+        }
+        else if (cardValue == 6)
+        {
+            System.out.println("Your card is a 6!");
+            roundPlayerHand +=6;
+        }
+        else if (cardValue == 7)
+        {
+            System.out.println("Your card is a 7!");
+            roundPlayerHand +=7;
+        }
+        else if (cardValue == 8)
+        {
+            System.out.println("Your card is a 8!");
+            roundPlayerHand +=8;
+        }
+        else if (cardValue == 9)
+        {
+            System.out.println("Your card is a 9!");
+            roundPlayerHand +=9;
+        }
+        else if (cardValue == 10)
+        {
+            System.out.println("Your card is a 10!");
+            roundPlayerHand +=10;
+        }
+        else
+        {
+            if (cardValue == 11)
+                System.out.println("Your card is a JACK!");
+            else if (cardValue == 12)
+                System.out.println("Your card is a QUEEN!");
+            else if (cardValue ==13)
+                System.out.println("Your card is a KING!");
+
+            roundPlayerHand += 10;
+        }
+        return roundPlayerHand;
+    }
+
     public static void main(String[] args)
     {
-        /*
-        Rename as BlackJack.java
-         */
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         Boolean playAgain = true;
@@ -26,67 +91,7 @@ public class Main {
             System.out.println();
             playerCardValue = random.nextInt(13) + 1;
             //System.out.println(playerCardValue);
-            if (playerCardValue == 1)
-            {
-                System.out.println("Your card is an ACE!");
-                playerHand += 1;
-            }
-            else if (playerCardValue == 2)
-            {
-                System.out.println("Your card is a 2!");
-                playerHand +=2;
-            }
-            else if (playerCardValue == 3)
-            {
-                System.out.println("Your card is a 3!");
-                playerHand +=3;
-            }
-            else if (playerCardValue == 4)
-            {
-                System.out.println("Your card is a 4!");
-                playerHand +=4;
-            }
-            else if (playerCardValue == 5)
-            {
-                System.out.println("Your card is a 5!");
-                playerHand +=5;
-            }
-            else if (playerCardValue == 6)
-            {
-                System.out.println("Your card is a 6!");
-                playerHand +=6;
-            }
-            else if (playerCardValue == 7)
-            {
-                System.out.println("Your card is a 7!");
-                playerHand +=7;
-            }
-            else if (playerCardValue == 8)
-            {
-                System.out.println("Your card is a 8!");
-                playerHand +=8;
-            }
-            else if (playerCardValue == 9)
-            {
-                System.out.println("Your card is a 9!");
-                playerHand +=9;
-            }
-            else if (playerCardValue == 10)
-            {
-                System.out.println("Your card is a 10!");
-                playerHand +=10;
-            }
-            else
-            {
-                if (playerCardValue == 11)
-                    System.out.println("Your card is a JACK!");
-                else if (playerCardValue == 12)
-                    System.out.println("Your card is a QUEEN!");
-                else if (playerCardValue ==13)
-                    System.out.println("Your card is a KING!");
-
-                playerHand += 10;
-            }
+            playerCardValue += printCardValue(playerCardValue);
 
             //Print value of  player hand
             System.out.println("Your hand is: " + playerHand);
