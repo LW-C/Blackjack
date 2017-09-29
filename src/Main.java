@@ -100,11 +100,11 @@ public class Main {
 
                 if (playerChoice < 1)
                 {
-                    System.out.println("Invalid input! \n Please enter an integer value between 1 and 4.");
+                    System.out.println("\nInvalid input!\nPlease enter an integer value between 1 and 4.");
                 }
                 else if (playerChoice > 4)
                 {
-                    System.out.println("Invalid input! \n Please enter an integer value between 1 and 4.");
+                    System.out.println("\nInvalid input!\nPlease enter an integer value between 1 and 4.");
                 }
                 else
                 {
@@ -114,11 +114,11 @@ public class Main {
             }
             catch (InputMismatchException notAnInt)
             {
-                System.out.println("Invalid input!\nPlease enter an integer value between 1 and 4.");
+                System.out.println("\nInvalid input!\nPlease enter an integer value between 1 and 4.");
             }
             catch (Exception except)
             {
-                System.out.println("Invalid input!\nPlease enter an integer value between 1 and 4.");
+                System.out.println("\nInvalid input!\nPlease enter an integer value between 1 and 4.");
             }
 
 
@@ -133,7 +133,7 @@ public class Main {
 
             System.out.print("Choose an option: ");
         }
-        return playerChoice;
+            return playerChoice;
 
     }
 
